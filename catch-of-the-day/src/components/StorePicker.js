@@ -22,7 +22,7 @@ class StorePicker extends React.Component {
   // If not using constructor, define a property instead:
   // (properties w/ arrow function bind "this" to the component)
   goToStore = (event) => {
-    
+
     // 1. Stop the form from submitting and refreshing page:
     event.preventDefault();
 
