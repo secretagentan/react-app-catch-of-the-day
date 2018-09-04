@@ -13,6 +13,7 @@ class StorePicker extends React.Component {
   //   this.goToStore = this.goToStore.bind(this);
   // }
 
+  // Create ref for input element in render():
   myInput = React.createRef();
 
   // If using constructor, define the method:
@@ -21,15 +22,17 @@ class StorePicker extends React.Component {
   // If not using constructor, define a property instead:
   // (properties w/ arrow function bind "this" to the component)
   goToStore = (event) => {
-    // 1. Stop the form from submitting and refreshing page
+    
+    // 1. Stop the form from submitting and refreshing page:
     event.preventDefault();
 
-    // 2. Get the text from that input
-    // - Don't touch the DOM in React, use refs
-    console.log(this);
-    // 3. Change the page to /store/whatever-they-entered
+    // 2. Get the text from that input:
+    // (Don't touch the DOM in React, use refs)
+    const storeName = this.myInput.value.value;
 
-    console.log("going to store");
+    // 3. Route the page to /store/whatever-they-entered:
+    this.props.history.push(`/store/${storeName}`);
+
   }
 
   render() {
