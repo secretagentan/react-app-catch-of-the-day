@@ -4,6 +4,9 @@ import { formatPrice } from "../helpers";
 // How does data get anywhere? Props!
 
 class Fish extends React.Component {
+  handleClick = () => {
+    this.props.addToOrder(this.props.index);
+  }
   render() {
     const { image, name, price, desc, status } = this.props.details;
     // Makes shorthand:
@@ -24,7 +27,7 @@ class Fish extends React.Component {
 
         <p>{ desc }</p>
 
-        <button disabled={ !isAvailable }> { isAvailable ? "Add to Order" : "Sold Out!" }</button>
+        <button disabled={ !isAvailable } onClick={ this.handleClick }>{ isAvailable ? "Add to Order" : "Sold Out!" }</button>
       </li>
     )
   }
