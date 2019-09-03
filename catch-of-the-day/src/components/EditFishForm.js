@@ -4,15 +4,15 @@ import { formatPrice } from "../helpers";
 class EditFishForm extends React.Component {
 
   handleChange = event => {
-    console.log("name: " + event.currentTarget.name);
-    console.log("value: " + event.currentTarget.value);
+    // console.log("name: " + event.currentTarget.name);
+    // console.log("value: " + event.currentTarget.value);
     // update that fish
     // 1. take a copy of the current fish
     const updatedFish = {
       ...this.props.fish,
       [event.currentTarget.name]: event.currentTarget.value
     };
-    console.log("updated: " + updatedFish)
+    // console.log("updated: " + updatedFish)
   this.props.updateFish(this.props.index, updatedFish);
   };
 
