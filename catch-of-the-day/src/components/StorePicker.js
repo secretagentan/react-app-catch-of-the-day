@@ -1,7 +1,12 @@
 import React from 'react';
-import { getFunName } from "../helpers"
+import PropTypes from "prop-types";
+import { getFunName } from "../helpers";
 
 class StorePicker extends React.Component {
+  static propTypes ={
+    history: PropTypes.object
+  }
+
   // How to bind "this" to the component:
   // (however, will get messy if you have too many methods)
   // constructor() {

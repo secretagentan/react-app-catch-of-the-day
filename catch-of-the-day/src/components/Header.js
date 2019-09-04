@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 
 // If component only has a render() method,
 // don't need to write out whole React.Component
@@ -18,6 +20,10 @@ const Header = props => (
     </h3>
   </header>
 )
+
+Header.propTypes = {
+  tagline: PropTypes.string.isRequired
+}
 
 // class Header extends React.Component {
 //   render() {
